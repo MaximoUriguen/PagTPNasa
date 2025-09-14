@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Comparador APOD</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>What was happening?</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Fotos APOD: Hoy vs Hace 20 años</h1>
-  <div id="comparacion" class="card-container">
+  <h1>What was happening 20 years ago? </h1>
 
-  </div>
+  <section>
+    <h2>Comparación automática (Hoy vs Hace 20 años)</h2>
+    <div id="autoComparacion" class="apod-container"></div>
+  </section>
 
-  <h2>Busca la foto APOD de una fecha específica</h2>
-  <form id="fechaForm">
-    <input type="date" id="fechaInput" max="" />
-    <button type="submit">Buscar</button>
-  </form>
-  <div id="resultadoUsuario"></div>
+  <section>
+    <h2>Elegí una fecha para comparar con 20 años atrás</h2>
+    <input type="date" id="fechaUsuario">
+    <button onclick="compararConFecha()">Comparar</button>
+    <div id="comparacionUsuario" class="apod-container"></div>
+  </section>
 
-  <script src="script.js"></script>
+  <section>
+    <h2>Fotos aleatorias</h2>
+    <input type="number" id="cantidadFotos" placeholder="Cantidad (1-10)" min="1" max="10">
+    <button onclick="mostrarAleatorias()">Mostrar</button>
+    <div id="fotosAleatorias" class="apod-container"></div>
+  </section>
+
+  
 </body>
+<script src="java.js"></script>
 </html>
+
